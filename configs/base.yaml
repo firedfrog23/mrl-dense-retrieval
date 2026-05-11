@@ -1,0 +1,45 @@
+# Shared defaults. All other configs deep-merge over this one.
+
+seed: 42
+
+paths:
+  models_dir: ./models
+  datasets_dir: ./datasets
+  checkpoints_dir: ./checkpoints
+  outputs_dir: ./outputs
+
+base_model:
+  # The base encoder fine-tuned by Phase 2 scripts. Run A and Run B both
+  # start from this checkpoint.
+  path: ./models/bge-base-en-v1.5
+  family: bge
+  max_seq_length: 256
+  batch_size: 128
+
+training:
+  triplets_parquet: ./datasets/msmarco_triplets_200k.parquet
+  num_train_samples: 200000
+  batch_size: 32
+  learning_rate: 2.0e-5
+  warmup_steps: 500
+  epochs: 1
+  fp16: true
+  num_workers: 4
+
+mrl:
+  dims: [768, 512, 256, 128, 64, 32]
+  weights: [1, 1, 1, 1, 1, 1]
+
+eval:
+  beir_tasks:
+    - scifact
+    - nfcorpus
+    - arguana
+    - fiqa
+    - trec-covid
+  qrels_split: test
+  dims_to_eval: [768, 512, 256, 128, 64, 32]
+  metrics: [ndcg_at_10, recall_at_100, map_at_10]
+  pca_fit_sample_size: 50000
+  cache_corpus_embeddings: true
+  embeddings_cache_dir: ./outputs/embeddings_cache

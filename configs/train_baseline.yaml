@@ -1,0 +1,6 @@
+# Run A: standard fine-tune, no MRL. The PCA baseline.
+
+run_name: bge-runA-baseline
+checkpoint_dir: ./checkpoints/bge-runA
+loss: mnrl    # MultipleNegativesRankingLoss, no Matryoshka wrapper
+log_file: ./outputs/logs/train_runA.log

@@ -1,0 +1,66 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ===== Virtual environments =====
+.venv/
+venv/
+env/
+endgame/
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+._*
+
+# ===== External data (downloadable, large) =====
+# Re-fetch with: python download_all.py
+models/
+datasets/
+
+# ===== Generated artifacts (regenerable from code + data) =====
+# Trained model weights (Phase 2; ~880 MB total)
+checkpoints/
+
+# Per-(encoder, dataset) full-dim embedding cache (Phase 4; ~2 GB total)
+outputs/embeddings_cache/
+
+# PCA projections (Phase 3; small but trivially regenerable)
+outputs/pca_models/
+
+# Logs (regenerated on each run)
+outputs/logs/
+*.log
+
+# ===== Smoke tests (one-off sanity checks; removed before commit) =====
+00_test_*.py
+01_smoke_test.py
+
+# ===== Misc =====
+*.tmp
+.env
+
+# ===== What IS tracked (kept for reviewer convenience) =====
+# - lib/                          (library code)
+# - configs/                      (YAML hyperparameters)
+# - 02_train_baseline.py          (Phase 2 entry)
+# - 03_train_mrl.py               (Phase 2 entry)
+# - 04_fit_pca.py                 (Phase 3 entry)
+# - 05_evaluate.py                (Phase 4 entry)
+# - 06_make_tables.py             (Phase 5 entry)
+# - 07_make_plots.py              (Phase 5 entry)
+# - download_all.py               (data acquisition)
+# - outputs/results/*.csv         (final eval results)
+# - outputs/tables/*.tex          (paper tables)
+# - outputs/figures/*.pdf         (paper figures)
+# - README.md, requirements.txt, .gitignore

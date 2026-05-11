@@ -1,0 +1,7 @@
+# Run B: MRL fine-tune. MatryoshkaLoss wrapping MNRL.
+# Same data, same hyperparameters, same seed as Run A. Only the loss differs.
+
+run_name: bge-runB-mrl
+checkpoint_dir: ./checkpoints/bge-runB
+loss: mrl     # MatryoshkaLoss(MultipleNegativesRankingLoss)
+log_file: ./outputs/logs/train_runB.log

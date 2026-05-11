@@ -1,0 +1,34 @@
+# Phase 4 evaluation matrix.
+#
+# Four variants, six dims, five BEIR datasets => 120 cells.
+# Phase 4 caches the full-dim corpus embeddings per encoder, so each
+# encoder is only run ONCE on each corpus; transforms are applied to
+# the cached vectors.
+
+variants:
+  - name: runA-truncate
+    encoder_path: ./checkpoints/bge-runA
+    encoder_family: bge
+    transform: truncate
+    transform_mode: standard
+
+  - name: runA-pca
+    encoder_path: ./checkpoints/bge-runA
+    encoder_family: bge
+    transform: pca
+    pca_dir: ./outputs/pca_models
+
+  - name: runB-truncate
+    encoder_path: ./checkpoints/bge-runB
+    encoder_family: bge
+    transform: truncate
+    transform_mode: standard
+
+  - name: nomic-truncate
+    encoder_path: ./models/nomic-embed-text-v1.5
+    encoder_family: nomic
+    transform: truncate
+    transform_mode: nomic
+
+results_csv: ./outputs/results/eval_results.csv
+log_file: ./outputs/logs/eval.log
