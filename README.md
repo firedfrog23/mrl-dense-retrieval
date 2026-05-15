@@ -6,7 +6,7 @@ We fine-tune `bge-base-en-v1.5` under two conditions (MNRL vs. MRL-wrapped MNRL)
 
 ## References
 
-- Kusupati et al. *Matryoshka Representation Learning.* NeurIPS 2022.
-- Zhang et al. *BGE: BAAI General Embedding.* 2023.
-- Nussbaum et al. *Nomic Embed: Training a Reproducible Long Context Text Embedder.* 2024.
-- Thakur et al. *BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models.* NeurIPS 2021 Datasets & Benchmarks.
+- Kusupati et al. [Matryoshka Representation Learning](https://arxiv.org/abs/2205.13147). NeurIPS 2022.
+- Xiao et al. [C-Pack: Packed Resources For General Chinese Embeddings](https://arxiv.org/abs/2309.07597). SIGIR 2024. (Official BGE framework)
+- Nussbaum et al. [Nomic Embed: Training a Reproducible Long Context Text Embedder](https://arxiv.org/abs/2402.01613). 2024.
+- Thakur et al. [BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models](https://arxiv.org/abs/2104.08663). NeurIPS 2021 Datasets & Benchmarks.
