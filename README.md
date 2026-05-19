@@ -1,22 +1,12 @@
-君がいないと 何もできないわけじゃないと
-ヤカンを火にかけたけど 紅茶のありかがわからない
-ほら朝食も作れたもんね だけどあまりおいしくない
-君が作ったのなら文句も 思いきり言えたのに
-一緒にいるときは きゅうくつに思えるけど
-やっと自由を手に入れた ぼくはもっと淋しくなった
-さよならと言った君の 気持ちはわからないけど
-いつもよりながめがいい 左に少し とまどってるよ
-もし君に一つだけ 強がりを言えるのなら
-もう恋なんてしないなんて 言わないよ絶対
-2本並んだ歯ブラシも 一本捨ててしまおう
-君の趣味で買った服も もったいないけど捨ててしまおう
-男らしく いさぎよくと ごみ箱かかえる僕は
-他のだれから見ても一番 センチメンタルだろう
-こんなにいっぱいの 君のぬけがら集めて
-ムダなものに囲まれて 暮らすのも幸せと知った
-君あての郵便が ポストに届いてるうちは
-かたすみで迷っている 背中を思って 心配だけど
-2人で出せなかった答えは 今度出会える
-君の知らない誰かと 見つけてみせるから
-本当に 本当に 君が大好きだったから
-もう恋なんてしないなんて 言わないよ絶対
+# MRL for Dense Text Retrieval: A Cross-Domain Comparison
+
+## Methodology
+
+We fine-tune `bge-base-en-v1.5` under two conditions (MNRL vs. MRL-wrapped MNRL) from identical initialization, data, and hyperparameters, then evaluate both against PCA-reduced and nomic-embed baselines across six embedding dimensions (768→32) on five BEIR domains.
+
+## References
+
+- Kusupati et al. [Matryoshka Representation Learning](https://arxiv.org/abs/2205.13147). NeurIPS 2022.
+- Xiao et al. [C-Pack: Packed Resources For General Chinese Embeddings](https://arxiv.org/abs/2309.07597). SIGIR 2024. (Official BGE framework)
+- Nussbaum et al. [Nomic Embed: Training a Reproducible Long Context Text Embedder](https://arxiv.org/abs/2402.01613). 2024.
+- Thakur et al. [BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models](https://arxiv.org/abs/2104.08663). NeurIPS 2021 Datasets & Benchmarks.
