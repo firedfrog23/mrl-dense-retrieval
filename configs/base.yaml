@@ -38,7 +38,7 @@ eval:
     - fiqa
     - trec-covid
   qrels_split: test
-  dims_to_eval: [768, 512, 256, 128, 64]
+  dims_to_eval: [768, 512, 256, 128, 64, 32]
   metrics: [ndcg_at_10, recall_at_100, map_at_10]
   pca_fit_sample_size: 50000
   cache_corpus_embeddings: true
