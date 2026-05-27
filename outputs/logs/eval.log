@@ -1,0 +1,209 @@
+INFO    | __main__ | === Phase 4: evaluation matrix ===
+INFO    | __main__ | variants:  ['runA-truncate', 'runA-pca', 'runB-truncate', 'nomic-truncate']
+INFO    | __main__ | datasets:  ['scifact', 'nfcorpus', 'arguana', 'fiqa', 'trec-covid']
+INFO    | __main__ | dims:      [768, 512, 256, 128, 64, 32]
+INFO    | __main__ | cells:     120
+INFO    | __main__ | cache dir: outputs/embeddings_cache
+INFO    | __main__ | output:    outputs/results/eval_results.csv
+INFO    | __main__ | 
+INFO    | __main__ | [1/5] dataset: scifact
+INFO    | __main__ |   loaded: BeirDataset(name='scifact', corpus=5183, queries=300, qrels=339)
+INFO    | __main__ |   variant: runA-truncate
+INFO    | lib.evaluation |   encoding scifact with bge-runA (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runA/scifact
+INFO    | __main__ |     dim=768: ndcg@10=0.6652  recall@100=0.9460  map@10=0.6191
+INFO    | __main__ |     dim=512: ndcg@10=0.6423  recall@100=0.9403  map@10=0.5969
+INFO    | __main__ |     dim=256: ndcg@10=0.6351  recall@100=0.9310  map@10=0.5932
+INFO    | __main__ |     dim=128: ndcg@10=0.5705  recall@100=0.8892  map@10=0.5230
+INFO    | __main__ |     dim= 64: ndcg@10=0.4819  recall@100=0.8230  map@10=0.4418
+INFO    | __main__ |     dim= 32: ndcg@10=0.3124  recall@100=0.6861  map@10=0.2722
+INFO    | __main__ |   variant: runA-pca
+INFO    | lib.evaluation |   cache hit: bge-runA/scifact
+INFO    | __main__ |     dim=768: ndcg@10=0.6652  recall@100=0.9460  map@10=0.6191
+INFO    | __main__ |     dim=512: ndcg@10=0.6671  recall@100=0.9443  map@10=0.6212
+INFO    | __main__ |     dim=256: ndcg@10=0.6568  recall@100=0.9317  map@10=0.6119
+INFO    | __main__ |     dim=128: ndcg@10=0.6156  recall@100=0.9100  map@10=0.5692
+INFO    | __main__ |     dim= 64: ndcg@10=0.4969  recall@100=0.8590  map@10=0.4488
+INFO    | __main__ |     dim= 32: ndcg@10=0.3560  recall@100=0.7922  map@10=0.3101
+INFO    | __main__ |   variant: runB-truncate
+INFO    | lib.evaluation |   encoding scifact with bge-runB (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runB/scifact
+INFO    | __main__ |     dim=768: ndcg@10=0.6511  recall@100=0.9367  map@10=0.6060
+INFO    | __main__ |     dim=512: ndcg@10=0.6289  recall@100=0.9117  map@10=0.5819
+INFO    | __main__ |     dim=256: ndcg@10=0.6194  recall@100=0.9117  map@10=0.5723
+INFO    | __main__ |     dim=128: ndcg@10=0.5798  recall@100=0.8900  map@10=0.5290
+INFO    | __main__ |     dim= 64: ndcg@10=0.5259  recall@100=0.8510  map@10=0.4835
+INFO    | __main__ |     dim= 32: ndcg@10=0.4077  recall@100=0.7598  map@10=0.3647
+INFO    | __main__ |   variant: nomic-truncate
+INFO    | lib.evaluation |   encoding scifact with nomic-embed-text-v1.5 (family=nomic, batch=32)
+INFO    | lib.evaluation |   cached: nomic-embed-text-v1.5/scifact
+INFO    | __main__ |     dim=768: ndcg@10=0.7033  recall@100=0.9283  map@10=0.6523
+INFO    | __main__ |     dim=512: ndcg@10=0.6976  recall@100=0.9233  map@10=0.6525
+INFO    | __main__ |     dim=256: ndcg@10=0.6811  recall@100=0.9117  map@10=0.6345
+INFO    | __main__ |     dim=128: ndcg@10=0.6444  recall@100=0.8903  map@10=0.5952
+INFO    | __main__ |     dim= 64: ndcg@10=0.5316  recall@100=0.8599  map@10=0.4866
+INFO    | __main__ |     dim= 32: ndcg@10=0.3577  recall@100=0.6847  map@10=0.3242
+INFO    | __main__ |   checkpointed 24 rows -> eval_results.csv
+INFO    | __main__ | 
+INFO    | __main__ | [2/5] dataset: nfcorpus
+INFO    | __main__ |   loaded: BeirDataset(name='nfcorpus', corpus=3633, queries=323, qrels=12334)
+INFO    | __main__ |   variant: runA-truncate
+INFO    | lib.evaluation |   encoding nfcorpus with bge-runA (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runA/nfcorpus
+INFO    | __main__ |     dim=768: ndcg@10=0.3434  recall@100=0.3302  map@10=0.2480
+INFO    | __main__ |     dim=512: ndcg@10=0.3380  recall@100=0.3266  map@10=0.2444
+INFO    | __main__ |     dim=256: ndcg@10=0.3173  recall@100=0.3107  map@10=0.2244
+INFO    | __main__ |     dim=128: ndcg@10=0.2585  recall@100=0.2794  map@10=0.1712
+INFO    | __main__ |     dim= 64: ndcg@10=0.1875  recall@100=0.2286  map@10=0.1190
+INFO    | __main__ |     dim= 32: ndcg@10=0.1180  recall@100=0.1995  map@10=0.0672
+INFO    | __main__ |   variant: runA-pca
+INFO    | lib.evaluation |   cache hit: bge-runA/nfcorpus
+INFO    | __main__ |     dim=768: ndcg@10=0.3434  recall@100=0.3302  map@10=0.2480
+INFO    | __main__ |     dim=512: ndcg@10=0.3358  recall@100=0.3254  map@10=0.2422
+INFO    | __main__ |     dim=256: ndcg@10=0.3338  recall@100=0.3250  map@10=0.2438
+INFO    | __main__ |     dim=128: ndcg@10=0.3148  recall@100=0.3123  map@10=0.2289
+INFO    | __main__ |     dim= 64: ndcg@10=0.2540  recall@100=0.2720  map@10=0.1716
+INFO    | __main__ |     dim= 32: ndcg@10=0.1631  recall@100=0.2213  map@10=0.0983
+INFO    | __main__ |   variant: runB-truncate
+INFO    | lib.evaluation |   encoding nfcorpus with bge-runB (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runB/nfcorpus
+INFO    | __main__ |     dim=768: ndcg@10=0.3480  recall@100=0.3342  map@10=0.2523
+INFO    | __main__ |     dim=512: ndcg@10=0.3410  recall@100=0.3363  map@10=0.2485
+INFO    | __main__ |     dim=256: ndcg@10=0.3241  recall@100=0.3222  map@10=0.2310
+INFO    | __main__ |     dim=128: ndcg@10=0.2908  recall@100=0.2973  map@10=0.1997
+INFO    | __main__ |     dim= 64: ndcg@10=0.2520  recall@100=0.2746  map@10=0.1689
+INFO    | __main__ |     dim= 32: ndcg@10=0.1888  recall@100=0.2474  map@10=0.1181
+INFO    | __main__ |   variant: nomic-truncate
+INFO    | lib.evaluation |   encoding nfcorpus with nomic-embed-text-v1.5 (family=nomic, batch=32)
+INFO    | lib.evaluation |   cached: nomic-embed-text-v1.5/nfcorpus
+INFO    | __main__ |     dim=768: ndcg@10=0.3471  recall@100=0.2977  map@10=0.2576
+INFO    | __main__ |     dim=512: ndcg@10=0.3329  recall@100=0.2913  map@10=0.2458
+INFO    | __main__ |     dim=256: ndcg@10=0.3236  recall@100=0.2853  map@10=0.2370
+INFO    | __main__ |     dim=128: ndcg@10=0.3068  recall@100=0.2702  map@10=0.2233
+INFO    | __main__ |     dim= 64: ndcg@10=0.2607  recall@100=0.2408  map@10=0.1767
+INFO    | __main__ |     dim= 32: ndcg@10=0.1671  recall@100=0.1803  map@10=0.0996
+INFO    | __main__ |   checkpointed 48 rows -> eval_results.csv
+INFO    | __main__ | 
+INFO    | __main__ | [3/5] dataset: arguana
+INFO    | __main__ |   loaded: BeirDataset(name='arguana', corpus=8674, queries=1406, qrels=1406)
+INFO    | __main__ |   variant: runA-truncate
+INFO    | lib.evaluation |   encoding arguana with bge-runA (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runA/arguana
+INFO    | __main__ |     dim=768: ndcg@10=0.3954  recall@100=0.9829  map@10=0.2704
+INFO    | __main__ |     dim=512: ndcg@10=0.3861  recall@100=0.9779  map@10=0.2634
+INFO    | __main__ |     dim=256: ndcg@10=0.3735  recall@100=0.9672  map@10=0.2528
+INFO    | __main__ |     dim=128: ndcg@10=0.3356  recall@100=0.9429  map@10=0.2256
+INFO    | __main__ |     dim= 64: ndcg@10=0.2769  recall@100=0.8737  map@10=0.1838
+INFO    | __main__ |     dim= 32: ndcg@10=0.1686  recall@100=0.7152  map@10=0.1087
+INFO    | __main__ |   variant: runA-pca
+INFO    | lib.evaluation |   cache hit: bge-runA/arguana
+INFO    | __main__ |     dim=768: ndcg@10=0.3954  recall@100=0.9829  map@10=0.2704
+INFO    | __main__ |     dim=512: ndcg@10=0.3856  recall@100=0.9793  map@10=0.2619
+INFO    | __main__ |     dim=256: ndcg@10=0.3780  recall@100=0.9714  map@10=0.2548
+INFO    | __main__ |     dim=128: ndcg@10=0.3561  recall@100=0.9557  map@10=0.2387
+INFO    | __main__ |     dim= 64: ndcg@10=0.3136  recall@100=0.9293  map@10=0.2095
+INFO    | __main__ |     dim= 32: ndcg@10=0.2428  recall@100=0.8408  map@10=0.1592
+INFO    | __main__ |   variant: runB-truncate
+INFO    | lib.evaluation |   encoding arguana with bge-runB (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runB/arguana
+INFO    | __main__ |     dim=768: ndcg@10=0.3923  recall@100=0.9822  map@10=0.2663
+INFO    | __main__ |     dim=512: ndcg@10=0.3866  recall@100=0.9793  map@10=0.2598
+INFO    | __main__ |     dim=256: ndcg@10=0.3783  recall@100=0.9757  map@10=0.2551
+INFO    | __main__ |     dim=128: ndcg@10=0.3593  recall@100=0.9600  map@10=0.2405
+INFO    | __main__ |     dim= 64: ndcg@10=0.3305  recall@100=0.9386  map@10=0.2189
+INFO    | __main__ |     dim= 32: ndcg@10=0.2581  recall@100=0.8587  map@10=0.1716
+INFO    | __main__ |   variant: nomic-truncate
+INFO    | lib.evaluation |   encoding arguana with nomic-embed-text-v1.5 (family=nomic, batch=32)
+INFO    | lib.evaluation |   cached: nomic-embed-text-v1.5/arguana
+INFO    | __main__ |     dim=768: ndcg@10=0.3571  recall@100=0.9836  map@10=0.2335
+INFO    | __main__ |     dim=512: ndcg@10=0.3546  recall@100=0.9800  map@10=0.2310
+INFO    | __main__ |     dim=256: ndcg@10=0.3392  recall@100=0.9757  map@10=0.2206
+INFO    | __main__ |     dim=128: ndcg@10=0.3250  recall@100=0.9629  map@10=0.2105
+INFO    | __main__ |     dim= 64: ndcg@10=0.2829  recall@100=0.9358  map@10=0.1801
+INFO    | __main__ |     dim= 32: ndcg@10=0.1963  recall@100=0.8016  map@10=0.1248
+INFO    | __main__ |   checkpointed 72 rows -> eval_results.csv
+INFO    | __main__ | 
+INFO    | __main__ | [4/5] dataset: fiqa
+INFO    | __main__ |   loaded: BeirDataset(name='fiqa', corpus=57638, queries=648, qrels=1706)
+INFO    | __main__ |   variant: runA-truncate
+INFO    | lib.evaluation |   encoding fiqa with bge-runA (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runA/fiqa
+INFO    | __main__ |     dim=768: ndcg@10=0.2531  recall@100=0.5548  map@10=0.1927
+INFO    | __main__ |     dim=512: ndcg@10=0.2357  recall@100=0.5451  map@10=0.1770
+INFO    | __main__ |     dim=256: ndcg@10=0.2025  recall@100=0.4858  map@10=0.1493
+INFO    | __main__ |     dim=128: ndcg@10=0.1339  recall@100=0.3726  map@10=0.0959
+INFO    | __main__ |     dim= 64: ndcg@10=0.0774  recall@100=0.2742  map@10=0.0520
+INFO    | __main__ |     dim= 32: ndcg@10=0.0337  recall@100=0.1389  map@10=0.0222
+INFO    | __main__ |   variant: runA-pca
+INFO    | lib.evaluation |   cache hit: bge-runA/fiqa
+INFO    | __main__ |     dim=768: ndcg@10=0.2531  recall@100=0.5548  map@10=0.1927
+INFO    | __main__ |     dim=512: ndcg@10=0.2517  recall@100=0.5497  map@10=0.1922
+INFO    | __main__ |     dim=256: ndcg@10=0.2290  recall@100=0.5343  map@10=0.1720
+INFO    | __main__ |     dim=128: ndcg@10=0.1777  recall@100=0.4698  map@10=0.1301
+INFO    | __main__ |     dim= 64: ndcg@10=0.1078  recall@100=0.3720  map@10=0.0765
+INFO    | __main__ |     dim= 32: ndcg@10=0.0438  recall@100=0.2016  map@10=0.0306
+INFO    | __main__ |   variant: runB-truncate
+INFO    | lib.evaluation |   encoding fiqa with bge-runB (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runB/fiqa
+INFO    | __main__ |     dim=768: ndcg@10=0.2828  recall@100=0.5904  map@10=0.2201
+INFO    | __main__ |     dim=512: ndcg@10=0.2648  recall@100=0.5813  map@10=0.2025
+INFO    | __main__ |     dim=256: ndcg@10=0.2441  recall@100=0.5419  map@10=0.1863
+INFO    | __main__ |     dim=128: ndcg@10=0.2011  recall@100=0.4961  map@10=0.1491
+INFO    | __main__ |     dim= 64: ndcg@10=0.1516  recall@100=0.4174  map@10=0.1083
+INFO    | __main__ |     dim= 32: ndcg@10=0.0802  recall@100=0.2766  map@10=0.0558
+INFO    | __main__ |   variant: nomic-truncate
+INFO    | lib.evaluation |   encoding fiqa with nomic-embed-text-v1.5 (family=nomic, batch=32)
+INFO    | lib.evaluation |   cached: nomic-embed-text-v1.5/fiqa
+INFO    | __main__ |     dim=768: ndcg@10=0.3765  recall@100=0.6817  map@10=0.3000
+INFO    | __main__ |     dim=512: ndcg@10=0.3713  recall@100=0.6735  map@10=0.2965
+INFO    | __main__ |     dim=256: ndcg@10=0.3515  recall@100=0.6572  map@10=0.2764
+INFO    | __main__ |     dim=128: ndcg@10=0.3205  recall@100=0.6246  map@10=0.2518
+INFO    | __main__ |     dim= 64: ndcg@10=0.2580  recall@100=0.5499  map@10=0.2001
+INFO    | __main__ |     dim= 32: ndcg@10=0.1433  recall@100=0.3517  map@10=0.1046
+INFO    | __main__ |   checkpointed 96 rows -> eval_results.csv
+INFO    | __main__ | 
+INFO    | __main__ | [5/5] dataset: trec-covid
+INFO    | __main__ |   loaded: BeirDataset(name='trec-covid', corpus=171332, queries=50, qrels=66336)
+INFO    | __main__ |   variant: runA-truncate
+INFO    | lib.evaluation |   encoding trec-covid with bge-runA (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runA/trec-covid
+INFO    | __main__ |     dim=768: ndcg@10=0.5706  recall@100=0.1017  map@10=0.5076
+INFO    | __main__ |     dim=512: ndcg@10=0.5116  recall@100=0.0953  map@10=0.4403
+INFO    | __main__ |     dim=256: ndcg@10=0.5059  recall@100=0.0875  map@10=0.4309
+INFO    | __main__ |     dim=128: ndcg@10=0.3988  recall@100=0.0673  map@10=0.3193
+INFO    | __main__ |     dim= 64: ndcg@10=0.2317  recall@100=0.0441  map@10=0.1770
+INFO    | __main__ |     dim= 32: ndcg@10=0.1149  recall@100=0.0235  map@10=0.0774
+INFO    | __main__ |   variant: runA-pca
+INFO    | lib.evaluation |   cache hit: bge-runA/trec-covid
+INFO    | __main__ |     dim=768: ndcg@10=0.5706  recall@100=0.1017  map@10=0.5076
+INFO    | __main__ |     dim=512: ndcg@10=0.5672  recall@100=0.1028  map@10=0.5004
+INFO    | __main__ |     dim=256: ndcg@10=0.5380  recall@100=0.0989  map@10=0.4615
+INFO    | __main__ |     dim=128: ndcg@10=0.4728  recall@100=0.0896  map@10=0.3961
+INFO    | __main__ |     dim= 64: ndcg@10=0.3621  recall@100=0.0724  map@10=0.3002
+INFO    | __main__ |     dim= 32: ndcg@10=0.2549  recall@100=0.0525  map@10=0.1821
+INFO    | __main__ |   variant: runB-truncate
+INFO    | lib.evaluation |   encoding trec-covid with bge-runB (family=bge, batch=128)
+INFO    | lib.evaluation |   cached: bge-runB/trec-covid
+INFO    | __main__ |     dim=768: ndcg@10=0.6318  recall@100=0.1124  map@10=0.5817
+INFO    | __main__ |     dim=512: ndcg@10=0.6103  recall@100=0.1098  map@10=0.5637
+INFO    | __main__ |     dim=256: ndcg@10=0.5914  recall@100=0.1038  map@10=0.5515
+INFO    | __main__ |     dim=128: ndcg@10=0.5492  recall@100=0.0929  map@10=0.4946
+INFO    | __main__ |     dim= 64: ndcg@10=0.4735  recall@100=0.0811  map@10=0.4141
+INFO    | __main__ |     dim= 32: ndcg@10=0.2763  recall@100=0.0509  map@10=0.2304
+INFO    | __main__ |   variant: nomic-truncate
+INFO    | lib.evaluation |   encoding trec-covid with nomic-embed-text-v1.5 (family=nomic, batch=32)
+INFO    | lib.evaluation |   cached: nomic-embed-text-v1.5/trec-covid
+INFO    | __main__ |     dim=768: ndcg@10=0.8234  recall@100=0.1497  map@10=0.8246
+INFO    | __main__ |     dim=512: ndcg@10=0.8236  recall@100=0.1482  map@10=0.8276
+INFO    | __main__ |     dim=256: ndcg@10=0.8046  recall@100=0.1416  map@10=0.8056
+INFO    | __main__ |     dim=128: ndcg@10=0.7452  recall@100=0.1310  map@10=0.7438
+INFO    | __main__ |     dim= 64: ndcg@10=0.6792  recall@100=0.1136  map@10=0.6271
+INFO    | __main__ |     dim= 32: ndcg@10=0.4639  recall@100=0.0685  map@10=0.4003
+INFO    | __main__ |   checkpointed 120 rows -> eval_results.csv
+INFO    | __main__ | 
+INFO    | __main__ | === done. 120 rows -> outputs/results/eval_results.csv ===
+INFO    | __main__ | summary by variant (avg nDCG@10 across all dims and datasets):
+INFO    | __main__ |         nomic-truncate: 0.4457
+INFO    | __main__ |          runB-truncate: 0.3873
+INFO    | __main__ |               runA-pca: 0.3701
+INFO    | __main__ |          runA-truncate: 0.3359

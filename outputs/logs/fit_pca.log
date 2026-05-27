@@ -1,0 +1,30 @@
+INFO    | __main__ | === Phase 3: fit PCA on Run A ===
+INFO    | __main__ | loading Run A from bge-runA
+INFO    | __main__ | sampling 50,000 unique passages from msmarco_triplets_200k.parquet
+INFO    | __main__ | got 50,000 passages
+INFO    | __main__ | encoding at full 768 dim ...
+INFO    | __main__ | embeddings: shape=(50000, 768), dtype=float32
+INFO    | __main__ | fitting PCAs for dims: [512, 256, 128, 64, 32]
+INFO    | lib.pca_fitting |   fitting PCA for dim=512
+INFO    | lib.pca_fitting |     explained variance: 0.9889
+INFO    | lib.pca_fitting |   fitting PCA for dim=256
+INFO    | lib.pca_fitting |     explained variance: 0.9127
+INFO    | lib.pca_fitting |   fitting PCA for dim=128
+INFO    | lib.pca_fitting |     explained variance: 0.7826
+INFO    | lib.pca_fitting |   fitting PCA for dim=64
+INFO    | lib.pca_fitting |     explained variance: 0.6298
+INFO    | lib.pca_fitting |   fitting PCA for dim=32
+INFO    | lib.pca_fitting |     explained variance: 0.4937
+INFO    | __main__ |   saved pca_512.joblib
+INFO    | __main__ |   saved pca_256.joblib
+INFO    | __main__ |   saved pca_128.joblib
+INFO    | __main__ |   saved pca_64.joblib
+INFO    | __main__ |   saved pca_32.joblib
+INFO    | __main__ | saved metadata: fit_info.json
+INFO    | __main__ | === Phase 3 done ===
+INFO    | __main__ | explained variance summary:
+INFO    | __main__ |   dim=512: 0.9889
+INFO    | __main__ |   dim=256: 0.9127
+INFO    | __main__ |   dim=128: 0.7826
+INFO    | __main__ |   dim= 64: 0.6298
+INFO    | __main__ |   dim= 32: 0.4937

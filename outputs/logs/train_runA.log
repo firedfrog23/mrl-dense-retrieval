@@ -1,0 +1,18 @@
+INFO    | lib.training | === bge-runA-baseline ===
+INFO    | lib.training | loading base model: bge-base-en-v1.5
+INFO    | lib.training | loading triplets: msmarco_triplets_200k.parquet
+INFO    | lib.training | loss: MultipleNegativesRankingLoss
+WARNING | lib.training | Windows: forcing num_workers=0 (was 4) to avoid DataLoader multiprocessing issues
+INFO    | lib.training | starting training
+INFO    | lib.training |   examples:    200,000
+INFO    | lib.training |   batch_size:  32
+INFO    | lib.training |   steps/epoch: 6,250
+INFO    | lib.training |   epochs:      1
+INFO    | lib.training |   lr:          2e-05
+INFO    | lib.training |   warmup:      500
+INFO    | lib.training |   fp16:        True
+INFO    | lib.training |   output:      bge-runA
+INFO    | lib.training | training done
+INFO    | lib.training | running quick NFCorpus eval ...
+INFO    | lib.training | NFCorpus nDCG@10 after bge-runA-baseline: 0.3434
+INFO    | lib.training | (zero-shot bge-base baseline was 0.3739; expect roughly that)
