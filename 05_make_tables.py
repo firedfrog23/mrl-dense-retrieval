@@ -1,18 +1,3 @@
-"""Phase 5a: generate LaTeX tables from outputs/results/eval_results.csv.
-
-Writes three booktabs tables to outputs/tables/, ready to \\input{} from the
-paper:
-    main_results.tex          variants x dims, avg nDCG@10 across datasets
-    per_dataset_at_dim32.tex  datasets x variants at dim=32
-    mrl_vs_pca.tex            head-to-head Run B vs Run A-PCA per dim
-
-The paper's main.tex pulls these directly:
-    \\begin{table}
-      \\centering
-      \\input{tables/main_results.tex}
-      \\caption{...}
-    \\end{table}
-"""
 import logging
 from pathlib import Path
 

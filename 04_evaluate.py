@@ -1,22 +1,3 @@
-"""Phase 4: full evaluation matrix.
-
-For each (variant, dim, dataset) combination:
-    1. Encode the corpus and queries at full 768 dim (cached after first time)
-    2. Apply the variant's transform (truncate or PCA) at the target dim
-    3. Score queries against corpus by dot product (== cosine for L2-normed)
-    4. Compute nDCG@10, Recall@100, MAP@10
-    5. Append row to results
-
-Output: a single CSV at outputs/results/eval_results.csv with one row per
-cell. Phase 5 reads this CSV to build all paper tables and figures.
-
-The CSV is rewritten after EACH dataset finishes, so a crash mid-run still
-leaves a usable partial CSV with all completed datasets. Embedding cache
-also survives crashes; on re-run, finished encoders+datasets reload from
-disk in milliseconds.
-
-Runtime: ~60-90 min on RTX 4070 Ti Super.
-"""
 import logging
 from pathlib import Path
 

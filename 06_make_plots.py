@@ -1,18 +1,3 @@
-"""Phase 5b: generate PDF figures from outputs/results/eval_results.csv.
-
-Writes three figures to outputs/figures/, sized for ACL single column
-(3.3 inches wide), serif font, editable PDF text:
-    ndcg_vs_dim.pdf            avg nDCG@10 vs dim, one line per variant
-    per_dataset_heatmap.pdf    dataset x dim retention heatmap (Run B)
-    mrl_vs_pca_gap.pdf         per-dim bar chart of MRL minus PCA
-
-Pulled into the paper directly:
-    \\begin{figure}
-      \\centering
-      \\includegraphics[width=\\columnwidth]{figures/ndcg_vs_dim.pdf}
-      \\caption{...}
-    \\end{figure}
-"""
 import logging
 from pathlib import Path
 

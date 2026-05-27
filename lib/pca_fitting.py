@@ -1,15 +1,3 @@
-"""PCA fitting helpers for Phase 3.
-
-The actual PCA math lives in `lib.transforms.PCATransform`. This module
-adds the small bits of glue that are specific to fitting PCA on MS MARCO
-training data:
-
-  * `load_unique_passages` samples unique positive passages from the
-    triplets parquet so we don't overweight passages that appear as the
-    positive for many queries.
-  * `fit_pcas` fits one `PCATransform` per target dim against the same
-    training embeddings, with diagnostic logging of explained variance.
-"""
 from __future__ import annotations
 
 import logging

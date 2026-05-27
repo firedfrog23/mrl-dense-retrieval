@@ -1,11 +1,3 @@
-"""Run A: fine-tune bge-base on MS MARCO triplets with MultipleNegativesRankingLoss.
-
-This is the non-MRL baseline. PCA gets fitted on its outputs in Phase 3
-to give a fair head-to-head comparison against Run B at sub-768 dims.
-
-Hyperparameters are in configs/train_baseline.yaml (overrides) and
-configs/base.yaml (shared defaults).
-"""
 from pathlib import Path
 
 from lib.training import run_training

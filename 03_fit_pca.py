@@ -1,20 +1,3 @@
-"""Phase 3: fit PCA projection matrices on Run A embeddings.
-
-These PCAs are the fair non-MRL compression baseline for the Phase 4 eval.
-At sub-768 dims, RQ2 asks: "does MRL truncation beat PCA on a same-trained
-model?" To answer that fairly, the PCA has to be fit on Run A (the non-MRL
-fine-tune) embeddings, not on raw bge-base.
-
-Pipeline:
-  1. Load Run A trained encoder.
-  2. Sample N unique positive passages from MS MARCO triplets.
-  3. Encode them at full 768 dim.
-  4. Fit one PCA per target dim (skipping 768 since that is no reduction).
-  5. Save each PCA to outputs/pca_models/pca_{dim}.joblib.
-  6. Save fit_info.json with metadata for the paper.
-
-Runtime: ~5-10 min on RTX 4070 Ti Super (mostly the 50K-passage encode).
-"""
 import json
 import logging
 from pathlib import Path
