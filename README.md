@@ -172,6 +172,7 @@ mrl-dense-retrieval/
 ├── 04_evaluate.py                   Phase 4: 120-cell eval matrix
 ├── 05_make_tables.py                Phase 5: LaTeX tables
 ├── 06_make_plots.py                 Phase 6: PDF figures
+├── Appendix_Plot.ipynb              Independent notebooks for adding table and plot
 ├── run_all.ps1                      Sequential runner
 ├── requirements.txt
 └── .gitignore
@@ -237,9 +238,10 @@ regenerate from the new CSV automatically.
 
 ## Authors
 
-- Julian (experiments and code)
-- [Teammate 2] (paper)
-- [Teammate 3] (paper)
+- Julian Alex Joshua (2206082606)
+- Lucinda Laurent (2206024745)
+- Nasywa Kamila Az Zahra (2206083060)
+- Fikri Risyad Indratno (2206031170)
 
 ## License
 
